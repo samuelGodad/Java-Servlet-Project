@@ -1,4 +1,4 @@
-# Project Collection
+# Java Servlet Project Collection
 
 This repository is a collection of projects developed using Jakarta technologies. Each project focuses on a specific aspect of application development, including a Calculator, Employee Management System, and Book Management System.
 

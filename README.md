@@ -1,46 +1,85 @@
-# Jakarta Project Collection
+# Employee Management System
 
-This repository is a collection of projects developed using Jakarta technologies. Each project focuses on a specific aspect of application development, including a Calculator, Employee Management System, and Book Management System.
+The Employee Management System is a web application that allows users to manage employee records. It provides functionality to add, edit, and delete employee information. The system is implemented using Java Servlets, JSP, and a PostgreSQL database.
 
 ## Table of Contents
 
-- [Project Descriptions](#project-descriptions)
-- [Technologies](#technologies)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Database Configuration](#database-configuration)
 - [License](#license)
 
-## Project Descriptions
+## Features
 
-### Calculator
+- Add new employees with their details (name, designation, salary).
+- View a list of all employees with options to edit or delete each record.
+- Edit employee information.
+- Delete employee records.
 
-The Calculator project is a simple web-based calculator application built with Jakarta Servlet and JSP. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.See the Calculator branch 
+## Technologies Used
 
-### Employee Management System
+- Java Servlets
+- JSP (JavaServer Pages)
+- PostgreSQL (Database)
+- HTML, CSS
+- JDBC (Java Database Connectivity)
 
-The Employee Management System project is a Jakarta-based web application that helps organizations manage their employee records. It provides features for adding, updating, and deleting employee information, as well as generating reports.To see the files switch to the EmployeeManagement branch
+## Setup
 
-### Book Management System
+1. **Clone the Repository:**
+   git clone https://github.com/your-username/employee-management-system.git
 
-The Book Management System project is a Jakarta EE application for managing a library's book inventory. It enables librarians to add new books, track borrowed books, and generate reports on book availability.you can get the file by switching to the BookManagement branch 
+2. **Database Configuration:**
+   - Set up a PostgreSQL database and update the `DbUtil.java` file with your database credentials.
 
-## Technologies
+3. **Deploy to Servlet Container:**
+   - Deploy the project to a servlet container like Apache Tomcat.
 
-The projects in this collection are built using the following technologies:
+## Usage
 
-- Jakarta Servlet and JSP
-- Jakarta Persistence API (JPA) for database access
-- JSP, CSS, and JavaScript for front-end interfaces
-- POSTGRESQL database for data storage
+1. Access the application through the browser:
+   http://localhost:8080/your-app-name/
 
-## Getting Started
+2. Use the application to manage employee records:
+   - Add new employees.
+   - View the list of employees.
+   - Edit or delete employee records.
 
-Each project within the collection has its own detailed README file that provides specific instructions for setting up and running the project. Please refer to the individual project README files for more information.
+## Project Structure
 
-## Contributing
+- `src/com.example.employe`: Java source files.
+  - `CreateEmployeeServlet.java`: Servlet for creating new employees.
+  - `EmployeeListServlet.java`: Servlet for displaying the list of employees.
+  - `EmployeeDAO.java`: Data Access Object for interacting with the database.
+  - `DbUtil.java`: Database utility class for establishing a connection.
+  - **Employee.java**: Represents the Employee entity with attributes like id, name, designation, and salary.
+- **UpdateEmployeeServlet.java**: Servlet for handling the update (edit) functionality of an employee.
+- **EditEmployeeServlet.java**: Servlet responsible for rendering the edit employee form.
+- **DeleteEmployeeServlet.java**: Servlet for handling the deletion of an employee.
 
-Contributions to this project collection are welcome! If you would like to contribute, please refer to the individual project repositories and follow their respective contribution guidelines.
+## Employee.java
+
+The `Employee.java` file contains the `Employee` class, which represents the model/entity for an employee. It includes attributes like id, name, designation, and salary. This class is used for interacting with employee data within the application.
+
+    
+- `webapp`: Web application directory.
+  - `WEB-INF`: Configuration files.
+  - `cssFiles`: CSS stylesheets.
+  - `AddEmployee.jsp`: JSP file for adding new employees.
+  - `EmployeeList.jsp`: JSP file for displaying the list of employees.
+  - ...
+
+## Database Configuration
+
+The application uses a PostgreSQL database. Configure the database connection in the `DbUtil.java` file with the appropriate URL, username, and password.
+
+DB_URL = jdbc:postgresql://localhost:5432/your-database-name
+DB_USER = your-username
+DB_PASSWORD = your-password
 
 ## License
 
-This project collection is licensed under the [MIT License](LICENSE). Please see the individual project repositories for the licenses associated with each project.
+This project is licensed under the MIT License - see the LICENSE file for details.

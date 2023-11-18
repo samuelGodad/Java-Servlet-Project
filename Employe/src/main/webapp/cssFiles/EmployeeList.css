@@ -1,0 +1,55 @@
+/* AddEmployee.css */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+#employeeTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#employeeTable th, #employeeTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#employeeTable th {
+    background-color: #f2f2f2;
+}
+
+#employeeTable a {
+    color: #3498db;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#employeeTable a:hover {
+    text-decoration: underline;
+}
+
+.view-link {
+    display: inline-block;
+    padding: 10px;
+    background-color: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#links {
+    margin-left: 10px;
+}
+#header_tables{
+    background-color: #36304a;
+    color: white;
+}

@@ -14,15 +14,15 @@ This repository is a collection of projects developed using Jakarta technologies
 
 ### Calculator
 
-The Calculator project is a simple web-based calculator application built with Jakarta Servlet and JSP. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
+The Calculator project is a simple web-based calculator application built with Jakarta Servlet and JSP. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.See the Calculator branch 
 
 ### Employee Management System
 
-The Employee Management System project is a Jakarta-based web application that helps organizations manage their employee records. It provides features for adding, updating, and deleting employee information, as well as generating reports.
+The Employee Management System project is a Jakarta-based web application that helps organizations manage their employee records. It provides features for adding, updating, and deleting employee information, as well as generating reports.To see the files switch to the EmployeeManagement branch
 
 ### Book Management System
 
-The Book Management System project is a Jakarta EE application for managing a library's book inventory. It enables librarians to add new books, track borrowed books, and generate reports on book availability.
+The Book Management System project is a Jakarta EE application for managing a library's book inventory. It enables librarians to add new books, track borrowed books, and generate reports on book availability.you can get the file by switching to the BookManagement branch 
 
 ## Technologies
 

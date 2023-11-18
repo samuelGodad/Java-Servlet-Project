@@ -30,7 +30,7 @@ The Employee Management System is a web application that allows users to manage 
 ## Setup
 
 1. **Clone the Repository:**
-   git clone https://github.com/your-username/employee-management-system.git
+   git clone https://github.com/samuelGodad/employee-management-system.git
 
 2. **Database Configuration:**
    - Set up a PostgreSQL database and update the `DbUtil.java` file with your database credentials.

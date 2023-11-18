@@ -1,105 +1,46 @@
-# Employee Management System
+# Project Collection
 
-The Employee Management System is a web application that allows users to manage employee records. It provides functionality to add, edit, and delete employee information. The system is implemented using Java Servlets, JSP, and a PostgreSQL database.
+This repository is a collection of projects developed using Jakarta technologies. Each project focuses on a specific aspect of application development, including a Calculator, Employee Management System, and Book Management System.
 
 ## Table of Contents
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Database Configuration](#database-configuration)
+- [Project Descriptions](#project-descriptions)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## Project Descriptions
 
-- Add new employees with their details (name, designation, salary).
-- View a list of all employees with options to edit or delete each record.
-- Edit employee information.
-- Delete employee records.
+### Calculator
 
-## Technologies Used
+The Calculator project is a simple web-based calculator application built with Jakarta Servlet and JSP. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
-- Java Servlets
-- JSP (JavaServer Pages)
-- PostgreSQL (Database)
-- HTML, CSS
-- JDBC (Java Database Connectivity)
+### Employee Management System
 
-## Setup
+The Employee Management System project is a Jakarta-based web application that helps organizations manage their employee records. It provides features for adding, updating, and deleting employee information, as well as generating reports.
 
-1. **Clone the Repository:**
-   git clone https://github.com/your-username/employee-management-system.git
+### Book Management System
 
-2. **Database Configuration:**
-   - Set up a PostgreSQL database and update the `DbUtil.java` file with your database credentials.
+The Book Management System project is a Jakarta EE application for managing a library's book inventory. It enables librarians to add new books, track borrowed books, and generate reports on book availability.
 
-3. **Deploy to Servlet Container:**
-   - Deploy the project to a servlet container like Apache Tomcat.
+## Technologies
 
-## Usage
+The projects in this collection are built using the following technologies:
 
-1. Access the application through the browser:
-   http://localhost:8080/your-app-name/
+- Jakarta Servlet and JSP
+- Jakarta Persistence API (JPA) for database access
+- HTML, CSS, and JavaScript for front-end interfaces
+- MySQL database for data storage
 
-2. Use the application to manage employee records:
-   - Add new employees.
-   - View the list of employees.
-   - Edit or delete employee records.
+## Getting Started
 
-## Project Structure
+Each project within the collection has its own detailed README file that provides specific instructions for setting up and running the project. Please refer to the individual project README files for more information.
 
-- `src/com.example.employe`: Java source files.
-  - `CreateEmployeeServlet.java`: Servlet for creating new employees.
-  - `EmployeeListServlet.java`: Servlet for displaying the list of employees.
-  - `EmployeeDAO.java`: Data Access Object for interacting with the database.
-  - `DbUtil.java`: Database utility class for establishing a connection.
-  - `Employee.java`: Represents the Employee entity with attributes like id, name, designation, and salary.
-  - `UpdateEmployeeServlet.java`: Servlet for handling the update (edit) functionality of an employee.
-  - `EditEmployeeServlet.java`: Servlet responsible for rendering the edit employee form.
-  - `DeleteEmployeeServlet.java`: Servlet for handling the deletion of an employee.
+## Contributing
 
-## Employee.java
-
-The `Employee.java` file contains the `Employee` class, which represents the model/entity for an employee. It includes attributes like id, name, designation, and salary. This class is used for interacting with employee data within the application.
-
-    
-- `webapp`: Web application directory.
-  - `WEB-INF`: Configuration files.
-  - `cssFiles`: CSS stylesheets.
-  - `AddEmployee.jsp`: JSP file for adding new employees.
-  - `EmployeeList.jsp`: JSP file for displaying the list of employees.
-  - ...
-## UpdateEmployeeServlet.java
-
-
-The `UpdateEmployeeServlet.java` file contains the UpdateEmployeeServlet class, which handles the logic for updating an employee's information in the database. It interacts with the EmployeeDAO class to perform the database update operation.
-## CreateEmployeeServlet.java
-
-The `CreateEmployeeServlet.java` file contains the `CreateEmployeeServlet` class, which manages the creation of new employee records in the database. When a user submits the employee creation form, this servlet is called to process the input and store it in the database.
-
-
-## DeleteEmployeeServlet.java
-The `DeleteEmployeeServlet.java` file contains the DeleteEmployeeServlet class, which handles the deletion of an employee from the database. When a user clicks the "Delete" link on the employee list page, this servlet is invoked to delete the selected employee.
-
-### AddEmployeeServlet.java
-
-The `AddEmployeeServlet.java` file contains the `AddEmployeeServlet` class, which handles the logic for adding a new employee to the database. It interacts with the `EmployeeDAO` class to perform the database insert operation.
-## EditEmployeeServlet.java
-The EditEmployeeServlet.java file contains the EditEmployeeServlet class, responsible for rendering the edit employee form. When a user clicks the "Edit" link on the employee list page, this servlet is invoked to display the form pre-filled with the employee's current information.
-
-
-
-
-## Database Configuration
-
-The application uses a PostgreSQL database. Configure the database connection in the `DbUtil.java` file with the appropriate URL, username, and password.
-
-DB_URL = jdbc:postgresql://localhost:5432/your-database-name
-DB_USER = your-username
-DB_PASSWORD = your-password
+Contributions to this project collection are welcome! If you would like to contribute, please refer to the individual project repositories and follow their respective contribution guidelines.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project collection is licensed under the [MIT License](LICENSE). Please see the individual project repositories for the licenses associated with each project.

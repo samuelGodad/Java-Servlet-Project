@@ -55,10 +55,10 @@ The Employee Management System is a web application that allows users to manage 
   - `EmployeeListServlet.java`: Servlet for displaying the list of employees.
   - `EmployeeDAO.java`: Data Access Object for interacting with the database.
   - `DbUtil.java`: Database utility class for establishing a connection.
-  - **Employee.java**: Represents the Employee entity with attributes like id, name, designation, and salary.
-- **UpdateEmployeeServlet.java**: Servlet for handling the update (edit) functionality of an employee.
-- **EditEmployeeServlet.java**: Servlet responsible for rendering the edit employee form.
-- **DeleteEmployeeServlet.java**: Servlet for handling the deletion of an employee.
+  - `Employee.java`: Represents the Employee entity with attributes like id, name, designation, and salary.
+  - `UpdateEmployeeServlet.java`: Servlet for handling the update (edit) functionality of an employee.
+  - `EditEmployeeServlet.java`: Servlet responsible for rendering the edit employee form.
+  - `DeleteEmployeeServlet.java`: Servlet for handling the deletion of an employee.
 
 ## Employee.java
 
@@ -71,6 +71,26 @@ The `Employee.java` file contains the `Employee` class, which represents the mod
   - `AddEmployee.jsp`: JSP file for adding new employees.
   - `EmployeeList.jsp`: JSP file for displaying the list of employees.
   - ...
+## UpdateEmployeeServlet.java
+
+
+The `UpdateEmployeeServlet.java` file contains the UpdateEmployeeServlet class, which handles the logic for updating an employee's information in the database. It interacts with the EmployeeDAO class to perform the database update operation.
+## CreateEmployeeServlet.java
+
+The `CreateEmployeeServlet.java` file contains the `CreateEmployeeServlet` class, which manages the creation of new employee records in the database. When a user submits the employee creation form, this servlet is called to process the input and store it in the database.
+
+
+## DeleteEmployeeServlet.java
+The `DeleteEmployeeServlet.java` file contains the DeleteEmployeeServlet class, which handles the deletion of an employee from the database. When a user clicks the "Delete" link on the employee list page, this servlet is invoked to delete the selected employee.
+
+### AddEmployeeServlet.java
+
+The `AddEmployeeServlet.java` file contains the `AddEmployeeServlet` class, which handles the logic for adding a new employee to the database. It interacts with the `EmployeeDAO` class to perform the database insert operation.
+## EditEmployeeServlet.java
+The EditEmployeeServlet.java file contains the EditEmployeeServlet class, responsible for rendering the edit employee form. When a user clicks the "Edit" link on the employee list page, this servlet is invoked to display the form pre-filled with the employee's current information.
+
+
+
 
 ## Database Configuration
 

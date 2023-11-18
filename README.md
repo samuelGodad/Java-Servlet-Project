@@ -30,8 +30,8 @@ The projects in this collection are built using the following technologies:
 
 - Jakarta Servlet and JSP
 - Jakarta Persistence API (JPA) for database access
-- HTML, CSS, and JavaScript for front-end interfaces
-- MySQL database for data storage
+- JSP, CSS, and JavaScript for front-end interfaces
+- POSTGRESQL database for data storage
 
 ## Getting Started
 

@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 600px;
+    height: 70vh;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+form label span {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="submit"],
+select {
+    width: calc(100% - 160px); /* Adjusted width to leave space for the span */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 12px;
+}
+.result_container {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.result_container.show {
+    bottom: 0;
+    opacity: 1;
+}
+.show {
+    display: block;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

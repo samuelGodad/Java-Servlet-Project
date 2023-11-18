@@ -41,4 +41,4 @@ To run the Book Management System:
 
 ## Project Structure
 
-The project structure is as follows:
+

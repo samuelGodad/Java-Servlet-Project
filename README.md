@@ -1,46 +1,56 @@
-# Jakarta Project Collection
+# Simple Calculator
 
-This repository is a collection of projects developed using Jakarta technologies. Each project focuses on a specific aspect of application development, including a Calculator, Employee Management System, and Book Management System.
+This is a web application that allows users to perform simple arithmetic or mathematics  calculations. It was built using Java Servlets and JSP.
 
-## Table of Contents
+## Features
 
-- [Project Descriptions](#project-descriptions)
-- [Technologies](#technologies)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/)
 
-## Project Descriptions
+## Requirements
 
-### Calculator
+- Java 8 or higher
+- Apache Tomcat 8 or higher
+- Web browser (Chrome, Firefox, Safari, etc.)
 
-The Calculator project is a simple web-based calculator application built with Jakarta Servlet and JSP. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
+## Installation
 
-### Employee Management System
+1. Download the source code from the GitHub repository: `https://github.com/yourusername/simple-calculator`
+2. Extract the contents of the ZIP file to a directory of your choice.
+3. Open the command prompt (Windows) or terminal (Mac/Linux) and navigate to the directory where you extracted the files.
+4. Run the following command to build the WAR file:
 
-The Employee Management System project is a Jakarta-based web application that helps organizations manage their employee records. It provides features for adding, updating, and deleting employee information, as well as generating reports.
+    ```
+    mvn clean install
+    ```
 
-### Book Management System
+5. Copy the WAR file (`simple-calculator.war`) to the `webapps` directory of your Tomcat installation.
+6. Start Tomcat by running the following command:
 
-The Book Management System project is a Jakarta EE application for managing a library's book inventory. It enables librarians to add new books, track borrowed books, and generate reports on book availability.
+    ```
+    catalina.bat run
+    ```
 
-## Technologies
+   Note: On Linux/Mac, use `catalina.sh` instead.
 
-The projects in this collection are built using the following technologies:
+7. Open a web browser and go to `http://localhost:8080/simple-calculator/`
 
-- Jakarta Servlet and JSP
-- Jakarta Persistence API (JPA) for database access
-- JSP, CSS, and JavaScript for front-end interfaces
-- POSTGRESQL database for data storage
+## Usage
 
-## Getting Started
+1. Enter the first number in the "Enter 1st Number" field.
+2. Enter the second number in the "Enter 2nd Number" field.
+3. Select the operation you want to perform from the dropdown list.
+4. Click the "Calculate" button.
+5. The result of the calculation will be displayed below the button in a good animation.
 
-Each project within the collection has its own detailed README file that provides specific instructions for setting up and running the project. Please refer to the individual project README files for more information.
+## Troubleshooting
 
-## Contributing
-
-Contributions to this project collection are welcome! If you would like to contribute, please refer to the individual project repositories and follow their respective contribution guidelines.
+- If you encounter any issues, check the Tomcat logs (`logs/catalina.out` or `logs/catalina.log`) for error messages.
+- Make sure that you have Java and Tomcat installed correctly and that they are both running.
+- If you make changes to the code, you will need to rebuild the WAR file and redeploy it to Tomcat.
 
 ## License
 
-This project collection is licensed under the [MIT License](LICENSE). Please see the individual project repositories for the licenses associated with each project.
+This project is licensed under the MIT License - see the LICENSE file for details.

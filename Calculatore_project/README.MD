@@ -1,6 +1,6 @@
 # Simple Calculator
 
-This is a web application that allows users to perform simple arithmetic calculations. It was built using Java Servlets and JSP.
+This is a web application that allows users to perform simple arithmetic or mathematics  calculations. It was built using Java Servlets and JSP.
 
 ## Features
 
@@ -43,7 +43,7 @@ This is a web application that allows users to perform simple arithmetic calcula
 2. Enter the second number in the "Enter 2nd Number" field.
 3. Select the operation you want to perform from the dropdown list.
 4. Click the "Calculate" button.
-5. The result of the calculation will be displayed below the button.
+5. The result of the calculation will be displayed below the button in a good animation.
 
 ## Troubleshooting
 

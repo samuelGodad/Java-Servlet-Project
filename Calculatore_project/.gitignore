@@ -2,6 +2,9 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+# Ignore files from other projects
+/BookManagement/
+/Employe/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

@@ -10,7 +10,9 @@ Create a web-based registration system using JSP,CSS,JS and Servlets. The system
 2. **Servlet Handling**: Use a Servlet to handle form submissions. Retrieve the form data from the request, validate it (e.g., check for empty fields), and store it in a simple data storage (could be an array, file, or database depending on your setup).
 3. **Confirmation Page**: After successful registration, show a confirmation page or message to users confirming their registration.
 4. **Login Page**: Create a basic login page using JSP and Servlets. Allow registered users to log in with their credentials.
-5. **Improvisation Potential**: This basic setup can be expanded by adding features like user authentication, enhancing the registration form with more fields, implementing user sessions, or improving data storage to a database for better scalability.
+5. **Logout**: Create a logout page to invalidate the session and log out the user.
+6. **Database**: Use PostgreSQL or any other database to store the user data. Make sure to update the JDBC driver and connection URL according to your database setup.
+7. **Error Handling**: Handle exceptions and display appropriate error messages to users.
 
 ## Requirements
 

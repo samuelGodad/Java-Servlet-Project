@@ -2,7 +2,7 @@
 
 ## Overview
 
-Create a web-based registration system using JSP,CSS,JS and Servlets. The system allows users to register by filling out a form and stores the submitted data in a simple database or file system.
+Create a web-based registration system using JSP,CSS,JS and Servlets. The system allows users to register by filling out a form and stores the submitted data in a simple database 
 
 ## Functionalities
 
@@ -12,27 +12,16 @@ Create a web-based registration system using JSP,CSS,JS and Servlets. The system
 4. **Login Page**: Create a basic login page using JSP and Servlets. Allow registered users to log in with their credentials.
 5. **Improvisation Potential**: This basic setup can be expanded by adding features like user authentication, enhancing the registration form with more fields, implementing user sessions, or improving data storage to a database for better scalability.
 
-## Project Structure
-|-- src
-| |-- main
-| | |-- java
-| | | |-- com.sami.online_registration_system
-| | | | | -- DataBaseConnection.java
-| |-- LogOutServlet.java
-| |-- SignUpServlet.java
-| |-- User.java
-| |-- UserDao.java
-|-- web
-| |-- WEB-INF
-| |-- lib
-| | |-- (put your external libraries here, e.g., JDBC driver)
-| |-- views
-| |-- css
-| | |-- style.css
-| |-- signup.jsp
-|-- web.xml
-|-- (other project files)
+## Requirements
 
+1. Java 8 or above
+2. Apache Tomcat 8.5 or above
+3. PostgreSQL 9.5 or above or any other database
+4. Eclipse IDE or any other IDE that supports Jakarta EE
+5. Maven
+6. JDBC Driver
+7. JSTL
+8. Bootstrap 4.5 or above
 
 ## Database Configuration
 
@@ -51,5 +40,4 @@ Configure your database settings in `DataBaseConnection.java` to establish a con
 9. Feel free to customize the application as per your needs
 10. Happy coding :)
 11. Thank you
-12. Sami
-13. 2023
+

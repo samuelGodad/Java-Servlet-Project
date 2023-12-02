@@ -1,5 +1,3 @@
-
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,13 +9,10 @@
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+<%--<%@include file="../includes/headers.jsp" %>--%>
 <section class="wrapper">
     <div class="form signup">
         <header>Signup</header>
-        <!-- Display signup errors here -->
-        <c:if test="${not empty requestScope.signupError}">
-            <div class="error">${requestScope.signupError}</div>
-        </c:if>
         <form action="signup" method="post">
             <input name="name" type="text" placeholder="Full name" required/>
             <input type="email" name="email" placeholder="Email address" required/>
@@ -32,14 +27,6 @@
 
     <div class="form login">
         <header>Login</header>
-        <!-- Display login errors here -->
-        <c:if test="${not empty requestScope.loginError}">
-            <div class="error">${requestScope.loginError}</div>
-            <script>
-                // Display a pop-up with the login error message
-                alert('${requestScope.loginError}');
-            </script>
-        </c:if>
         <form action="login" method="post">
             <input type="text" name="email" placeholder="Email address" required/>
             <input type="password" name="password" placeholder="Password" required/>
@@ -49,39 +36,45 @@
     </div>
 
     <script>
-        const wrapper = document.querySelector(".wrapper"),
-            signupHeader = document.querySelector(".signup header"),
-            loginHeader = document.querySelector(".login header");
+        document.addEventListener("DOMContentLoaded", function () {
+            const wrapper = document.querySelector(".wrapper"),
+                signupHeader = document.querySelector(".signup header"),
+                loginHeader = document.querySelector(".login header");
 
-        // Function to show login form
-        function showLoginForm() {
-            wrapper.classList.add("active");
-        }
+            // Function to show login form
+            function showLoginForm() {
+                wrapper.classList.add("active");
+                document.getElementById('loginEmail').focus(); // Set focus on the login form's email input
+            }
 
-        // Event listener for loginHeader click
-        loginHeader.addEventListener("click", () => {
-            wrapper.classList.add("active");
+            // Event listener for loginHeader click
+            loginHeader.addEventListener("click", () => {
+                wrapper.classList.add("active");
+                document.getElementById('loginEmail').focus(); // Set focus on the login form's email input
+            });
+
+            // Event listener for signupHeader click
+            signupHeader.addEventListener("click", () => {
+                wrapper.classList.remove("active");
+            });
+            const urlParams = new URLSearchParams(window.location.search);
+            const showLogin = urlParams.get('showLogin');
+            // Display a pop-up with the login error message (if exists)
+             const loginError = '<%= request.getAttribute("loginError") %>';
+            const signupError = '<%= request.getAttribute("signupError") %>';
+            if (loginError.trim() !== '' && loginError.trim() !== 'null')  {
+                alert(loginError);
+                showLoginForm();
+            }
+            // Display the login form if the showLogin parameter is true
+            if (showLogin === 'true') {
+                showLoginForm();
+            }
+            if (signupError.trim() !== '' && signupError.trim() !== 'null')  {
+                alert(signupError);
+                showLoginForm();
+            }
         });
-
-        // Event listener for signupHeader click
-        signupHeader.addEventListener("click", () => {
-            wrapper.classList.remove("active");
-        });
-
-        // Check for the showLogin parameter in the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const showLogin = urlParams.get('showLogin');
-
-        // If showLogin is true, call the showLoginForm function
-        if (showLogin === 'true') {
-            showLoginForm();
-        }
-
-        // Display a pop-up with the login error message (if exists)
-        const loginError = '${requestScope.loginError}';
-        if (loginError.trim() !== '') {
-            alert(loginError);
-        }
     </script>
 </section>
 </body>

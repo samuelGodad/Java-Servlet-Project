@@ -1,5 +1,4 @@
 package com.sami.online_registration_system;
-
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.RequestDispatcher;
@@ -29,6 +28,7 @@ public class LoginServlet extends HttpServlet {
 			String name = userDao.getUserName(email);
 			request.getSession().setAttribute("userName", name);
 			request.getSession().setAttribute("userEmail", email);
+			request.getSession().setAttribute("signup", false);
 			try {
 				response.sendRedirect("welcome");
 			} catch (IOException e) {
@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 			}
 		} else {
 			// Invalid user, display an error message or redirect to the login page
-			request.setAttribute("message", "Invalid credentials. Please try again.");
+			request.setAttribute("loginError", "Invalid email or password. Please try again.");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("back?showLogin=true");
 			dispatcher.forward(request, response);
 		}

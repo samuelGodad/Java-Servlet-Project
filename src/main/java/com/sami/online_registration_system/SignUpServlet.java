@@ -25,8 +25,8 @@ public class SignUpServlet extends HttpServlet {
 		String password = request.getParameter("password");
 
 		if (userDao.userExists(email)) {
-			request.setAttribute("message", "You are already registered. Please log in.");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("login");
+			request.setAttribute("signupError", "Email already exists. Instead Please try to  log in.");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("back?showLogin=true");
 			dispatcher.forward(request, response);
 		} else {
 			User user = new User(name, email, password);
@@ -34,7 +34,9 @@ public class SignUpServlet extends HttpServlet {
 			// After saving the user to the database
 			String userName = user.getName();
 			HttpSession session = request.getSession();
+
 			session.setAttribute("userName", userName);
+			session.setAttribute("signup", true);
 			response.sendRedirect("welcome");
 		}
 	}
